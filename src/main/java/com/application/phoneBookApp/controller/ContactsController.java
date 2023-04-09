@@ -35,4 +35,9 @@ public class ContactsController {
         return contactsService.searchByLastName(lastName);
     }
 
+    @GetMapping("/allContacts")
+    List<Contacts> getAllContacts(){
+        return contactsService.findAllContacts();
+    }
+
 }

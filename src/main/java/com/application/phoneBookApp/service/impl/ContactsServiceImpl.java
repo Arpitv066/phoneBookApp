@@ -34,4 +34,9 @@ public class ContactsServiceImpl implements ContactsService {
     public List<Contacts> searchByLastName(String lastName) {
         return contactsRepository.findByLastNameStartsWithIgnoreCaseOrLastNameEndsWithIgnoreCaseOrLastNameLikeIgnoreCaseOrderByLastNameAsc(lastName);
     }
+
+    @Override
+    public List<Contacts> findAllContacts() {
+        return contactsRepository.findAll();
+    }
 }

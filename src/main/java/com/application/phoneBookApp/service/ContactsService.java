@@ -11,4 +11,6 @@ public interface ContactsService {
     boolean deleteContact(int id);
 
     List<Contacts> searchByLastName(String lastName);
+
+    List<Contacts> findAllContacts();
 }
